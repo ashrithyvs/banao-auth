@@ -15,7 +15,7 @@ function Register() {
     await auth
       .createUserWithEmailAndPassword(email, password)
       .then((e) => history.push("/"))
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error.message));
   };
 
   return (
@@ -44,7 +44,7 @@ function Register() {
             value={password}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="outline-dark" type="submit">
           Submit
         </Button>
       </Form>

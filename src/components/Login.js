@@ -14,7 +14,7 @@ function Login() {
     await auth
       .signInWithEmailAndPassword(email, password)
       .then(() => history.push("/"))
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error.message));
   };
 
   return (
@@ -43,7 +43,7 @@ function Login() {
             value={password}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="outline-dark" type="submit">
           Submit
         </Button>
       </Form>

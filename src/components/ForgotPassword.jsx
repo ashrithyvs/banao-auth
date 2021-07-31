@@ -15,8 +15,8 @@ function ForgotPassword() {
         alert("Kindly check your email to reset your password!");
         history.push("/");
       })
-      .catch(function (e) {
-        console.log(e);
+      .catch((error) => {
+        alert(error.message);
       });
   };
 
@@ -35,7 +35,7 @@ function ForgotPassword() {
             value={email}
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button variant="outline-dark" type="submit">
           Submit
         </Button>
       </Form>
